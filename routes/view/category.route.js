@@ -4,7 +4,8 @@ const { Category } = require('../../db/models');
 
 router.get('/', async (req, res) => {
   try {
-    const categories = Category.findAll();
+    const categories = await Category.findAll();
+    console.log(categories, '-----------------------------------');
     const html = res.renderComponent(CategoryPage, {
       title: 'categorycard',
       categories,
