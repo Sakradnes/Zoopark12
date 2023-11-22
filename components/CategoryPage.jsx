@@ -1,13 +1,17 @@
 const React = require('react');
-function Category({ category }) {
+const Layout = require('./Layout');
+const Category = require('./CategoryBack');
+
+function CategoryPage({ categories, title }) {
   return (
-    <div>
-      <img src={category.url} />
-      <a href={`/category}${category.id}`}>
-        <h2>{category.name}</h2>
-      </a>
-    </div>
+    <Layout title={title}>
+      <div>
+        {categories.map((category) => (
+          <Category key={category.id} category={category} />
+        ))}
+      </div>
+    </Layout>
   );
 }
 
-module.exports = Category;
+module.exports = CategoryPage;
