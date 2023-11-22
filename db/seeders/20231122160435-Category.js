@@ -8,12 +8,18 @@ module.exports = {
       [
         {
           name: 'Рептилии',
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           name: 'Млекопитающие',
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           name: 'Птицы',
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       ],
       {}
@@ -21,6 +27,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('People', null, {});
+    await queryInterface.bulkDelete('Categories', null, {});
   },
 };
