@@ -1,8 +1,8 @@
 const React = require('react');
 const Layout = require('./Layout');
-const Animal = require('./Animal');
+const Animal = require('./AnimalOne');
 
-function AnimalList({ title, animals }) {
+function AnimalsList({ title, animals }) {
   return (
     <Layout title={title}>
       <div>
@@ -14,4 +14,4 @@ function AnimalList({ title, animals }) {
   );
 }
 
-module.exports = AnimalList;
+module.exports = AnimalsList;
