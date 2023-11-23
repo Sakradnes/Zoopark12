@@ -1,4 +1,7 @@
+/* eslint-disable react/prop-types */
 const React = require('react');
+const NavBar = require('./NavBar');
+
 
 module.exports = function Layout({ title, children }) {
   return (
@@ -16,7 +19,7 @@ module.exports = function Layout({ title, children }) {
 
         <title>{title}</title>
       </head>
-
+      <NavBar />
       <body>{children}</body>
     </html>
   );
