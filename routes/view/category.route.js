@@ -34,7 +34,6 @@ router.get('/:id/animals/:idAnimal', async (req, res) => {
     const { idAnimal } = req.params;
     const animal = await Animal.findOne({
       where: { id: idAnimal },
-    
     });
     const html = res.renderComponent(AnimalTitle, {
       title: 'One-Card',
