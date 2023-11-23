@@ -5,4 +5,5 @@ router.get('/', (req, res) => {
   const html = res.renderComponent(LoginPage, { title: 'AdminS' });
   res.send(html);
 });
+
 module.exports = router;

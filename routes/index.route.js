@@ -1,14 +1,16 @@
-const router = require('express').Router();
-
-const mainRouter = require('./view/main.route');
-const animalRouter = require('./view/card.route');
+const LoginRoute = require('./view/login.route');
 const CategoryRouter = require('./view/category.route');
-const LoginPage = require('../components/page/LoginPage');
+const AnimalsRouter = require('./view/card.route');
 
-router.use('/', mainRouter);
-router.use('/card', animalRouter);
+const animalRouter = require('./api/animalsApi.route');
+
+const ApiLoginAdminRouter = require('./api/login.router');
+
 router.use('/categories', CategoryRouter);
-router.use('/admin/login', LoginPage);
+router.use('/animals', AnimalsRouter);
+router.use('/admin/login', LoginRoute);
+router.use('/api/login/router', ApiLoginAdminRouter);
+router.use('/api/animals', animalRouter);
 
 
 module.exports = router;
