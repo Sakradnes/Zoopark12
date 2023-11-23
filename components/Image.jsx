@@ -5,6 +5,7 @@ function getImage({ imgAnimal }) {
     <div>
       <p>{imgAnimal.url}</p>
     </div>
+    
   );
 }
 
