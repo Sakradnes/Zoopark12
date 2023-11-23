@@ -1,10 +1,11 @@
 const router = require('express').Router();
-const { Animal } = require('../../db/models');
+const { Animal, ImgAnimals } = require('../../db/models');
 const AnimalList = require('../../components/AnimalList');
 
 router.get('/', async (req, res) => {
   try {
-    const animals = await Animal.findAll();
+    const animals = await Animal.findAll({ include: { model: ImgAnimals } });
+
     const html = res.renderComponent(AnimalList, {
       title: 'animals',
       animals,

@@ -13,7 +13,7 @@ module.exports = function Layout({ title, children }) {
           crossOrigin="anonymous"
         />
         <link rel="stylesheet" href="/css/style.css" />
-
+        <script defer src="/script/login.js" />
         <title>{title}</title>
       </head>
 
