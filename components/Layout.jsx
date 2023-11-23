@@ -12,8 +12,9 @@ module.exports = function Layout({ title, children }) {
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossOrigin="anonymous"
         />
-        <link rel="stylesheet" href="/css/style.css" />
+        {/* <link rel="stylesheet" href="/css/style.css" /> */}
         <script defer src="/script/login.js" />
+        <script defer src="/script/animalScript.js" />
         <title>{title}</title>
       </head>
 
