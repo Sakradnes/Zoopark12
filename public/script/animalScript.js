@@ -1,5 +1,5 @@
 const addAnimal = document.getElementById('addAnimal');
-
+const error = document.getElementById('errooor');
 if (addAnimal) {
   addAnimal.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -16,6 +16,10 @@ if (addAnimal) {
       }),
     });
     const data = await res.json();
-    console.log(data);
+    if (data.html) {
+      error.insertAdjacentHTML('beforeend', data.html);
+    }else {
+        error.innerHTML = data.message
+    }
   });
 }
