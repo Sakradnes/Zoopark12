@@ -10,4 +10,7 @@ function NavBar() {
     </div>
   );
 }
+
+
 module.exports = NavBar;
+
