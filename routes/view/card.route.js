@@ -4,7 +4,11 @@ const AnimalList = require('../../components/AnimalList');
 
 router.get('/', async (req, res) => {
   try {
+
+
+
     const animals = await Animal.findAll({ include: ImgAnimals });
+
     const html = res.renderComponent(AnimalList, {
       title: 'animals',
       animals,
