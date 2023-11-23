@@ -8,10 +8,7 @@ if (loginForm) {
       password: password.value,
       email: email.value,
     };
-    if (data.email === '' || data.password === '') {
-      alert('Заполните все поля!');
-      return;
-    }
+
     try {
       const res1 = await fetch('/api/login/router', {
         method: 'POST',
@@ -27,7 +24,7 @@ if (loginForm) {
       if (respons.success) {
         window.location.href = '/categories';
       } else {
-        alert(respons.error);
+        document.querySelector('.errLogin').innerHTML = respons.message;
       }
     } catch (error) {
       console.log(error);
