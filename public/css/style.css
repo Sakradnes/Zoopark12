@@ -1,0 +1,89 @@
+* {
+  margin: 10px;
+  padding: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Young Serif', serif;
+}
+.a1 {
+  font-size: 20px;
+  text-decoration: none;
+  color: black !important;
+}
+
+.a1:hover {
+  text-decoration: none;
+  color: #666 !important;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+body {
+  background-image: url(https://n1s2.hsmedia.ru/50/e1/e1/50e1e1b28bdddbc327c91cf2edfe19cf/5000x3591_0xac120004_8013682501677667304.jpeg);
+}
+.a2 {
+  font-size: 20px;
+  text-decoration: none;
+  color: black !important;
+}
+
+.a1:hover {
+  text-decoration: none;
+  color: #666 !important;
+}
+
+.animal-name {
+  margin: 12px 0 8px;
+  color: #f5e646;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 730px;
+}
+.fon {
+  background-color: #255;
+}
+.text-animal {
+  color: white;
+}
+
+.input1 {
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.buttunAdd{
+
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+#addAnimal {
+  display: flex;
+  justify-content: center;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+}
+.buttonLoga {
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+
+.input2 {
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+
+}

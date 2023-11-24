@@ -1,8 +1,7 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const ssr = require('../middleware/ssr');
-const { verifyAccessToken } = require('../middleware/verifyTokens');
-const { checkUser } = require('../middleware/auth');
+const ssr = require('../middlewares/ssr');
+const  checkUser  = require('../middlewares/verifyJWT');
 
 const config = (app) => {
   app.use(express.json());
@@ -10,7 +9,6 @@ const config = (app) => {
   app.use(express.static('public'));
   app.use(ssr);
   app.use(cookieParser());
-  app.use(verifyAccessToken);
   app.use(checkUser);
 };
 

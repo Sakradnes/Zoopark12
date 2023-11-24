@@ -8,6 +8,10 @@ if (loginForm) {
       password: password.value,
       email: email.value,
     };
+    if (data.email === '' || data.password === '') {
+      alert('Заполните все поля!');
+      return;
+    }
 
     try {
       const res1 = await fetch('/api/login/router', {

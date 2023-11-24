@@ -1,22 +1,21 @@
 require('@babel/register');
-const express = require('express');
-const morgan = require('morgan');
-const path = require('path');
-const indexRouter = require('./routes/index.route');
+require('dotenv').config();
 
-const ssr = require('./middlewares/ssr');
+const express = require('express');
+
+const indexRouter = require('./routes/index.route');
+const serverConfig = require('./config/serverConfig')
 
 const app = express();
 
-app.use(ssr);
-app.use(morgan('dev'));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.urlencoded({ extended: true })); //даем разрешение на чтение данных из body из формы
-app.use(express.json());
+serverConfig(app);
+// app.use(checkUser);
+
 
 app.use('/', indexRouter);
 
+const PORT = process.env.PORT ?? 3000;
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Сервер');
 });

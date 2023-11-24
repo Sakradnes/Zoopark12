@@ -3,14 +3,21 @@ const React = require('react');
 
 function NavBar() {
   return (
-    <div className="container">
-      <a href="/categories">Категории</a>
-      <a href="/tarifs">Тарифы</a>
-      <a href="/">О Нас</a>
+
+    <div>
+      <div className="container">
+        <a className="a1" href="/categories">
+          Животные
+        </a>
+        <a className="a1" href="/">
+          Тарифы
+        </a>
+        <a className="a1" href="/">
+          О Нас
+        </a>
+      </div>
     </div>
   );
 }
 
-
 module.exports = NavBar;
-
