@@ -26,6 +26,10 @@ module.exports = (sequelize, DataTypes) => {
         },
         onDelete: 'cascade',
       },
+      url: {
+        allowNull: false,
+        type: DataTypes.TEXT,
+      },
     },
     {
       sequelize,
