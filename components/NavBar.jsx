@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <div className="container">
       <a href="/categories">Категории</a>
-      <a href="/">Тарифы</a>
+      <a href="/tarifs">Тарифы</a>
       <a href="/">О Нас</a>
     </div>
   );

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 const React = require('react');
 const Layout = require('./Layout');
+const NavBar = require('./NavBar');
 // const CategoryPage = require('./CategoryPage');
 
 function Main({ title, animals }) {
@@ -14,6 +15,7 @@ function Main({ title, animals }) {
           <div>{animal.name}</div>
         ))} */}
       </div>
+      <NavBar />
     </Layout>
   );
 }

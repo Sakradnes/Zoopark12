@@ -20,7 +20,7 @@ module.exports = function Layout({ title, children }) {
         <script defer src="/script/animalScript.js" />
         <title>{title}</title>
       </head>
-      <NavBar />
+     
       <body>{children}</body>
     </html>
   );
