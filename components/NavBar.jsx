@@ -3,6 +3,7 @@ const React = require('react');
 
 function NavBar() {
   return (
+
     <div>
       <div className="container">
         <a className="a1" href="/categories">
