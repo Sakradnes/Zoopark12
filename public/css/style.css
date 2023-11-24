@@ -91,6 +91,17 @@ body {
 
 
 }
+
+.bigWrapper {
+  display: flex;
+  flex-direction: row;
+  
+}
+.wrapperForTarif {
+  
+  border: 1px solid black;
+  border-radius: 10px;
+
 #errooor{
   display: flex;
   justify-content: center;

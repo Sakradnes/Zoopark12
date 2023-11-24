@@ -8,7 +8,7 @@ function NavBar() {
         <a className="a1" href="/categories">
           Животные
         </a>
-        <a className="a1" href="/">
+        <a className="a1" href="/tarif">
           Тарифы
         </a>
 

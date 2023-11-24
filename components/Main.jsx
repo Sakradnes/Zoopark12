@@ -4,8 +4,7 @@ const Layout = require('./Layout');
 const NavBar = require('./NavBar');
 // const CategoryPage = require('./CategoryPage');
 
-function Main({ title, animals }) {
-  console.log(animals);
+function Main({ title }) {
   return (
     <Layout title={title}>
       <div className="cont">

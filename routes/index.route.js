@@ -6,9 +6,13 @@ const MainRouter = require('./view/main.route');
 const TimeWorke = require('./view/worke.route');
 
 const animalRouter = require('./api/animalsApi.route');
+
+const TarifRouter = require('./view/tarif.router');
+
 const ApiLoginAdminRouter = require('./api/login.router');
 
 router.use('/', MainRouter);
+router.use('/tarif', TarifRouter);
 
 router.use('/time', TimeWorke);
 router.use('/categories', CategoryRouter);
