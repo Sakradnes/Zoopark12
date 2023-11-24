@@ -12,7 +12,7 @@ router.use('/', MainRouter);
 router.use('/categories', CategoryRouter);
 router.use('/animals', AnimalsRouter);
 router.use('/admin/login', LoginRoute);
-router.use('/api/login/router', verifyAccess, ApiLoginAdminRouter);
+router.use('/api/login/router', ApiLoginAdminRouter);
 router.use('/api/animals', animalRouter);
 
 module.exports = router;
