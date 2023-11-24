@@ -7,7 +7,7 @@ const MainRouter = require('./view/main.route');
 const animalRouter = require('./api/animalsApi.route');
 
 const ApiLoginAdminRouter = require('./api/login.router');
-const verifyAccess = require('../middlewares/rejectIfNotAuthorized');
+
 
 
 router.use('/', MainRouter);

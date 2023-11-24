@@ -5,7 +5,6 @@ function AnimalTitle({ animal, user }) {
   console.log(user);
   return (
     <Layout>
-
       <div className="animalCard">
         <img src="" />
         <h1>{animal.name}</h1>
@@ -32,7 +31,6 @@ function AnimalTitle({ animal, user }) {
           </>
         )}
         {/* )} */}
-
       </div>
     </Layout>
   );
