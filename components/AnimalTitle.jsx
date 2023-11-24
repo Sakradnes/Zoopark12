@@ -6,7 +6,7 @@ function AnimalTitle({ animal, user }) {
   return (
     <Layout>
       <div className="animalCard">
-        <img src="" />
+        <img className='photo' src={animal.url} />
         <h1>{animal.name}</h1>
         <p>{animal.description}</p>
         {/* {admin && admin.id === animal.adminId && ( */}
