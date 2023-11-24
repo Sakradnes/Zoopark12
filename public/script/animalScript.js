@@ -1,4 +1,5 @@
 const addAnimal = document.getElementById('addAnimal');
+
 const error = document.getElementById('errooor');
 if (addAnimal) {
   addAnimal.addEventListener('submit', async (event) => {
