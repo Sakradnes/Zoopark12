@@ -7,12 +7,12 @@ const AddAnimal = require('./AddAnimal');
 function AnimalsList({ title, animals }) {
   return (
     <Layout title={title}>
-      <AddAnimal />
       <div >
         {animals.map((animal) => (
           <Animal key={animal.id} animal={animal} />
         ))}
       </div>
+      <AddAnimal />
     </Layout>
   );
 }
