@@ -19,7 +19,9 @@ function Main({ title, animals }) {
           <div>{animal.name}</div>
         ))} */}
       </div>
-     
+
+      <NavBar />
+
     </Layout>
   );
 }

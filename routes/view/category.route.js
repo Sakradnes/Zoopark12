@@ -32,6 +32,7 @@ router.get('/:id/animals', async (req, res) => {
 
 router.get('/:id/animals/:idAnimal', async (req, res) => {
   try {
+    console.log(res.locals.user,'----')
     const { idAnimal } = req.params;
     const animal = await Animal.findOne({
       where: { id: idAnimal },
