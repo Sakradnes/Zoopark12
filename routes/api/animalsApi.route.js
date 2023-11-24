@@ -1,23 +1,26 @@
 const router = require('express').Router();
-const AddAnimal = require('../../components/AddAnimal');
+
 const { Animal, ImgAnimals } = require('../../db/models');
 
 router.post('/', async (req, res) => {
-
-  const newAnimal = await Animal.create({});
-  
-try {
-    const { name, description, categoryId } = req.body;
-    if (name && description && categoryId) {
-      const animal = await Animal.create({
-        name,
-        description,
-        categoryId,
-      });
-      const html = res.renderComponent(Animal, { animal }, { doctype: false });
-      res.status(201).json(html);
-    } else {
-      res.status(400).json({ message: 'Заполни все поля' });
+  try {
+    if (res.locals.user) {
+      const { name, description, categoryId } = req.body;
+      if (name && description && categoryId) {
+        const animal = await Animal.create({
+          name,
+          description,
+          categoryId,
+        });
+        const html = res.renderComponent(
+          Animal,
+          { animal },
+          { doctype: false }
+        );
+        res.status(201).json(html);
+      } else {
+        res.status(400).json({ message: 'Заполни все поля' });
+      }
     }
   } catch ({ message }) {
     res.status(500).json(message);
@@ -30,7 +33,7 @@ router.put('/:idAnimals', async (req, res) => {
   try {
     const update = await Animal.findOne({ where: { id: idAnimals } });
     if (!update) {
-      return res.status(400).json({ message: 'Не доступа ' });
+      return res.status(400).json({ message: 'Нет доступа ' });
     }
     update.name = name;
     update.description = description;
@@ -43,7 +46,22 @@ router.put('/:idAnimals', async (req, res) => {
   }
 });
 
-
-  
+router.delete('/:idAnimals', async (req, res) => {
+  const { idAnimals } = req.params;
+  try {
+    const animalDelete = await Animal.destroy({ where: { id: idAnimals } });
+    if (!animalDelete) {
+      return res
+        .status(400)
+        .json({ success: false, message: 'Ошибка в запросе' });
+    }
+    res.status(201).json({
+      success: true,
+      message: `Удачное удаление ${animalDelete.title}`,
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
 
 module.exports = router;

@@ -29,6 +29,7 @@ router.get('/:id/animals', async (req, res) => {
     res.status(500).send(errore.message);
   }
 });
+
 router.get('/:id/animals/:idAnimal', async (req, res) => {
   try {
     const { idAnimal } = req.params;
