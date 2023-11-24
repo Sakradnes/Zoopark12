@@ -49,19 +49,36 @@ body {
   color: white;
 }
 
-.input1{
-  background: rgba( 255, 255, 255, .01);
+.input1 {
+  background: rgba(255, 255, 255, 0.01);
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
+
 }
-.buttunAdd{
+.buttunAdd {
   border-radius: 10px;
   background-color: black;
   color: white;
-
 }
-#addAnimal{
+#addAnimal {
   display: flex;
   justify-content: center;
+}
+.category {
+  display: flex;
+  justify-content: center;
+}
+.buttonLoga {
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+
+.input2 {
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }

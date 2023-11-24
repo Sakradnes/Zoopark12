@@ -12,6 +12,7 @@ function AnimalsList({ title, animals }) {
           <Animal key={animal.id} animal={animal} />
         ))}
       </div>
+      <div id='addAnimal'><h1>Добавить животное</h1></div>
       <AddAnimal />
     </Layout>
   );
