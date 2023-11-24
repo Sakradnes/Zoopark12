@@ -5,9 +5,9 @@ module.exports = function LoginPage({ title }) {
   return (
     <Layout title={title}>
       <form className="formLogin">
-        <input type="text" name="email" />
-        <input type="text" name="password" />
-        <button type="submit" className="buttonLoga">
+        <input className='input1' type="text" name="email" />
+        <input className='input1' type="text" name="password" />
+        <button  type="submit" className="buttonLoga">
           Войти
         </button>
       </form>
