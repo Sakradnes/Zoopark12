@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   try {
     const categories = await Category.findAll();
     const html = res.renderComponent(CategoryPage, {
-      title: 'categorycard',
+      title: 'ILU',
       categories,
     });
     res.status(200).send(html);
@@ -21,7 +21,7 @@ router.get('/:id/animals', async (req, res) => {
   try {
     const animals = await Animal.findAll({ where: { categoryId: id } });
     const html = res.renderComponent(AnimalsList, {
-      title: 'categorycard',
+      title: 'AnnaOneLove',
       animals,
     });
     res.status(200).send(html);

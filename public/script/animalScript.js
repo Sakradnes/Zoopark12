@@ -18,8 +18,8 @@ if (addAnimal) {
     const data = await res.json();
     if (data.html) {
       error.insertAdjacentHTML('beforeend', data.html);
-    }else {
-        error.innerHTML = data.message
+    } else {
+      error.innerHTML = data.message;
     }
   });
 }
