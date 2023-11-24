@@ -3,7 +3,6 @@ const React = require('react');
 
 function NavBar() {
   return (
-
     <div>
       <div className="container">
         <a className="a1" href="/categories">
@@ -12,8 +11,9 @@ function NavBar() {
         <a className="a1" href="/">
           Тарифы
         </a>
+       
         <a className="a1" href="/">
-          О Нас
+          Режим работы
         </a>
       </div>
     </div>

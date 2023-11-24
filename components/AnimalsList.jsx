@@ -8,11 +8,13 @@ function AnimalsList({ title, animals }) {
   return (
     <Layout title={title}>
 
+
       <div id="ADD">
         <h1>Добавить животное</h1>
       </div>
 
-  <div id='addAnimal'><h1>Добавить животное</h1></div>
+ 
+
 
       <AddAnimal />
       <div className="animalContainer">
@@ -20,14 +22,6 @@ function AnimalsList({ title, animals }) {
           <Animal key={animal.id} animal={animal} />
         ))}
       </div>
-
-
-
-    
-
-  
-
-   
 
     </Layout>
   );
