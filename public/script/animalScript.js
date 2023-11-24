@@ -1,10 +1,10 @@
-const addAnimal = document.getElementById('addAnimal');
-
+const addAnimal = document.querySelector('#addAnimal');
+console.log(addAnimal);
 const error = document.getElementById('errooor');
 if (addAnimal) {
   addAnimal.addEventListener('submit', async (event) => {
     event.preventDefault();
-    const { name, description, categoryId } = event.target;
+    const { name, description, categoryId, url } = event.target;
     const res = await fetch('/api/animals', {
       method: 'POST',
       headers: {
@@ -14,6 +14,7 @@ if (addAnimal) {
         name: name.value,
         description: description.value,
         categoryId: categoryId.value,
+        url: url.value,
       }),
     });
     const data = await res.json();
