@@ -7,7 +7,7 @@ const AddAnimal = require('./AddAnimal');
 function AnimalsList({ title, animals }) {
   return (
     <Layout title={title}>
-
+  <div id='addAnimal'><h1>Добавить животное</h1></div>
       <AddAnimal />
       <div className="animalContainer">
 
@@ -18,11 +18,11 @@ function AnimalsList({ title, animals }) {
         ))}
       </div>
 
-      <div id='addAnimal'><h1>Добавить животное</h1></div>
+    
 
-      <h1 className='add'>Добавить животных</h1>
+  
 
-      <AddAnimal />
+   
     </Layout>
   );
 }
