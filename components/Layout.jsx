@@ -23,6 +23,7 @@ module.exports = function Layout({ title, children }) {
         <link rel="stylesheet" href="/css/style.css" />
         <script defer src="/script/login.js" />
         <script defer src="/script/animalScript.js" />
+        <script defer src="/script/removeScript.js" />
         <title>{title}</title>
       </head>
 
