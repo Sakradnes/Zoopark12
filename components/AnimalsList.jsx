@@ -16,7 +16,7 @@ function AnimalsList({ title, animals }) {
  
 
 
-      <AddAnimal />
+      <AddAnimal category={animals[0].categoryId}/>
       <div className="animalContainer">
         {animals.map((animal) => (
           <Animal key={animal.id} animal={animal} />

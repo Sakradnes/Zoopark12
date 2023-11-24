@@ -11,8 +11,8 @@ function NavBar() {
         <a className="a1" href="/tarif">
           Тарифы
         </a>
-       
-        <a className="a1" href="/">
+
+        <a className="a1" href="/time">
           Режим работы
         </a>
       </div>

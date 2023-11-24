@@ -1,6 +1,5 @@
 const router = require('express').Router();
 
-
 const { Animal } = require('../../db/models');
 const AnimalOne = require('../../components/AnimalOne');
 const fileuploadMiddeleware = require('../../utils/fileuploadMiddeleware');
@@ -8,31 +7,31 @@ const fileuploadMiddeleware = require('../../utils/fileuploadMiddeleware');
 router.post('/', async (req, res) => {
   // const file = req.files?.homesImg;
   // const arrUrl = await Promise.all(
-    // file.map(async (el) => fileuploadMiddeleware(el))
+  // file.map(async (el) => fileuploadMiddeleware(el))
   // );
 
   try {
-    const { name, description, categoryId } = req.body;
-    if (name && description && categoryId) {
+    const { name, description, categoryId, url } = req.body;
+    if (name && description && categoryId && url) {
       const animal = await Animal.create({
         name,
         description,
         categoryId,
+        url,
       });
 
       const html = res.renderComponent(
         AnimalOne,
         { animal },
-        { doctype: false },
-        
+        { doctype: false }
       );
 
       res.status(201).json({ html });
     } else {
       res.status(400).json({ message: 'Заполни все поля' });
-
     }
   } catch ({ message }) {
+    console.log(message);
     res.status(500).json(message);
   }
 });
@@ -54,7 +53,6 @@ router.put('/:idAnimals', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-
 
 router.delete('/:idAnimals', async (req, res) => {
   const { idAnimals } = req.params;
