@@ -49,35 +49,41 @@ body {
   color: white;
 }
 
-.input1{
-  background: rgba( 255, 255, 255, .01);
+.input1 {
+  background: rgba(255, 255, 255, 0.01);
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
-}
-.add{
-  display: flex;
-  justify-content: center;
-}
-.buttunAdd{
-  border-radius: 10px;
-  background-color: black;
-  color: white;
 
 }
-#addAnimal{
-  display: flex;
-  justify-content: center;
-}
-.buttonLoga{
+
+.buttunAdd{
+
   border-radius: 10px;
   background-color: black;
   color: white;
-  width: 200px;
+}
+#addAnimal {
   display: flex;
   justify-content: center;
 }
-.formLogin{
+
+.category {
   display: flex;
   justify-content: center;
+}
+.buttonLoga {
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+
+.input2 {
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+
 }
