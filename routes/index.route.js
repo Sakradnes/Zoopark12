@@ -5,12 +5,13 @@ const CategoryRouter = require('./view/category.route');
 const AnimalsRouter = require('./view/card.route');
 const MainRouter = require('./view/main.route');
 const animalRouter = require('./api/animalsApi.route');
-
+const TarifRouter = require('./view/tarif.router');
 const ApiLoginAdminRouter = require('./api/login.router');
 const verifyAccess = require('../middlewares/rejectIfNotAuthorized');
 
 
 router.use('/', MainRouter);
+router.use('/tarif', TarifRouter);
 
 router.use('/categories', CategoryRouter);
 router.use('/animals', AnimalsRouter);
